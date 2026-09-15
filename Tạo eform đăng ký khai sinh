@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>E-Form Đăng ký khai sinh</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    margin:0;
+    background:#f4f7fb;
+    color:#222;
+}
+
+.header{
+    background:#0757a6;
+    color:white;
+    text-align:center;
+    padding:20px 15px;
+}
+
+.header h2{
+    margin:0;
+    font-size:18px;
+}
+
+.header h1{
+    margin:8px 0 0;
+    font-size:25px;
+}
+
+.container{
+    max-width:750px;
+    margin:auto;
+    padding:20px;
+}
+
+.section{
+    background:white;
+    padding:20px;
+    border-radius:12px;
+    margin-bottom:18px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.08);
+}
+
+.section h3{
+    color:#0757a6;
+    margin-top:0;
+    border-bottom:1px solid #ddd;
+    padding-bottom:10px;
+}
+
+label{
+    display:block;
+    font-weight:bold;
+    margin-top:15px;
+    margin-bottom:6px;
+}
+
+input, select, textarea{
+    width:100%;
+    box-sizing:border-box;
+    padding:12px;
+    font-size:16px;
+    border:1px solid #bbb;
+    border-radius:8px;
+}
+
+textarea{
+    min-height:70px;
+}
+
+.required{
+    color:red;
+}
+
+button{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    font-size:17px;
+    font-weight:bold;
+    cursor:pointer;
+    margin-top:10px;
+}
+
+.btn-main{
+    background:#0757a6;
+    color:white;
+}
+
+.btn-clear{
+    background:#e7e7e7;
+}
+
+.notice{
+    background:#fff8dd;
+    padding:15px;
+    border-radius:10px;
+    margin-bottom:18px;
+}
+
+#result{
+    display:none;
+    background:#e9f7ef;
+    padding:20px;
+    border-radius:12px;
+    margin-top:20px;
+}
+
+.back{
+    display:inline-block;
+    margin-bottom:15px;
+    color:#0757a6;
+    text-decoration:none;
+    font-weight:bold;
+}
+</style>
+</head>
+
+<body>
+
+<div class="header">
+    <h2>TRUNG TÂM PHỤC VỤ HÀNH CHÍNH CÔNG XÃ DIỄN CHÂU</h2>
+    <h1>E-FORM ĐĂNG KÝ KHAI SINH</h1>
+</div>
+
+<div class="container">
+
+<a class="back" href="index.html">← Quay lại Kho biểu mẫu</a>
+
+<div class="notice">
+    📱 Vui lòng điền thông tin theo hướng dẫn.
+    Các mục có dấu <span class="required">*</span> là thông tin bắt buộc.
+</div>
+
+<form id="birthForm">
+
+<div class="section">
+
+<h3>👤 1. Người yêu cầu đăng ký khai sinh</h3>
+
+<label>Họ và tên <span class="required">*</span></label>
+<input id="nguoiYeuCau" required
+placeholder="Ví dụ: Nguyễn Văn An">
+
+<label>Số định danh cá nhân/CCCD</label>
+<input id="cccd"
+inputmode="numeric"
+maxlength="12"
+placeholder="Nhập 12 chữ số">
+
+<label>Số điện thoại <span class="required">*</span></label>
+<input id="dienThoai" required
+type="tel"
+placeholder="Ví dụ: 0912345678">
+
+<label>Địa chỉ cư trú</label>
+<textarea id="diaChi"
+placeholder="Nhập địa chỉ cư trú"></textarea>
+
+</div>
+
+
+<div class="section">
+
+<h3>👶 2. Thông tin người được khai sinh</h3>
+
+<label>Họ và tên trẻ <span class="required">*</span></label>
+<input id="hoTenTre" required>
+
+<label>Ngày sinh <span class="required">*</span></label>
+<input id="ngaySinh" type="date" required>
+
+<label>Giới tính <span class="required">*</span></label>
+
+<select id="gioiTinh" required>
+<option value="">-- Chọn giới tính --</option>
+<option>Nam</option>
+<option>Nữ</option>
+</select>
+
+<label>Nơi sinh</label>
+<textarea id="noiSinh"></textarea>
+
+<label>Quê quán</label>
+<input id="queQuan">
+
+<label>Dân tộc</label>
+<input id="danToc" value="Kinh">
+
+<label>Quốc tịch</label>
+<input id="quocTich" value="Việt Nam">
+
+</div>
+
+
+<div class="section">
+
+<h3>👨 3. Thông tin người cha</h3>
+
+<label>Họ và tên cha</label>
+<input id="hoTenCha">
+
+<label>Năm sinh</label>
+<input id="namSinhCha" type="number">
+
+<label>Số định danh cá nhân/CCCD</label>
+<input id="cccdCha" inputmode="numeric" maxlength="12">
+
+<label>Nơi cư trú</label>
+<textarea id="diaChiCha"></textarea>
+
+</div>
+
+
+<div class="section">
+
+<h3>👩 4. Thông tin người mẹ</h3>
+
+<label>Họ và tên mẹ</label>
+<input id="hoTenMe">
+
+<label>Năm sinh</label>
+<input id="namSinhMe" type="number">
+
+<label>Số định danh cá nhân/CCCD</label>
+<input id="cccdMe" inputmode="numeric" maxlength="12">
+
+<label>Nơi cư trú</label>
+<textarea id="diaChiMe"></textarea>
+
+</div>
+
+
+<button class="btn-main" type="submit">
+✓ KIỂM TRA THÔNG TIN
+</button>
+
+<button class="btn-clear" type="reset">
+↻ XÓA VÀ KHAI LẠI
+</button>
+
+</form>
+
+
+<div id="result">
+
+<h3>✅ Thông tin đã nhập</h3>
+
+<div id="resultContent"></div>
+
+<br>
+
+<button class="btn-main" onclick="window.print()">
+🖨️ IN / LƯU PDF
+</button>
+
+</div>
+
+</div>
+
+
+<script>
+
+document.getElementById("birthForm").addEventListener("submit", function(e){
+
+e.preventDefault();
+
+let cccd = document.getElementById("cccd").value;
+
+if(cccd && !/^\d{12}$/.test(cccd)){
+    alert("Số định danh cá nhân/CCCD phải gồm 12 chữ số.");
+    return;
+}
+
+let ngaySinh =
+document.getElementById("ngaySinh").value;
+
+if(ngaySinh){
+    let p = ngaySinh.split("-");
+    ngaySinh = p[2]+"/"+p[1]+"/"+p[0];
+}
+
+let html = `
+<p><b>Người yêu cầu:</b>
+${document.getElementById("nguoiYeuCau").value}</p>
+
+<p><b>CCCD:</b>
+${document.getElementById("cccd").value}</p>
+
+<p><b>Điện thoại:</b>
+${document.getElementById("dienThoai").value}</p>
+
+<hr>
+
+<p><b>Họ tên trẻ:</b>
+${document.getElementById("hoTenTre").value}</p>
+
+<p><b>Ngày sinh:</b>
+${ngaySinh}</p>
+
+<p><b>Giới tính:</b>
+${document.getElementById("gioiTinh").value}</p>
+
+<p><b>Nơi sinh:</b>
+${document.getElementById("noiSinh").value}</p>
+
+<hr>
+
+<p><b>Cha:</b>
+${document.getElementById("hoTenCha").value}</p>
+
+<p><b>Mẹ:</b>
+${document.getElementById("hoTenMe").value}</p>
+`;
+
+document.getElementById("resultContent").innerHTML = html;
+
+document.getElementById("result").style.display="block";
+
+document.getElementById("result").scrollIntoView({
+    behavior:"smooth"
+});
+
+});
+
+</script>
+
+</body>
+</html>
