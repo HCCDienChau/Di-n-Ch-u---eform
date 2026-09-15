@@ -1,1 +1,229 @@
 
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Biểu mẫu Đất đai - Trung tâm PVHCC xã Diễn Châu</title>
+
+<style>
+
+body{
+    font-family:Arial,sans-serif;
+    margin:0;
+    background:#f4f7fb;
+    color:#222;
+}
+
+.header{
+    background:#0757a6;
+    color:white;
+    text-align:center;
+    padding:22px 15px;
+}
+
+.header h2{
+    margin:0;
+    font-size:18px;
+}
+
+.header h1{
+    margin:8px 0 0;
+    font-size:27px;
+}
+
+.container{
+    max-width:850px;
+    margin:auto;
+    padding:20px;
+}
+
+.back{
+    display:inline-block;
+    margin-bottom:18px;
+    color:#0757a6;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.search{
+    width:100%;
+    box-sizing:border-box;
+    padding:15px;
+    font-size:17px;
+    border:1px solid #bbb;
+    border-radius:10px;
+    margin-bottom:20px;
+}
+
+.card{
+    background:white;
+    padding:18px;
+    margin-bottom:12px;
+    border-radius:12px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.08);
+}
+
+.card h3{
+    margin:0 0 8px;
+    color:#0757a6;
+}
+
+.card p{
+    margin:0;
+    color:#666;
+    line-height:1.5;
+}
+
+.card a{
+    text-decoration:none;
+    color:inherit;
+}
+
+.active{
+    border-left:5px solid #0757a6;
+}
+
+.coming{
+    opacity:0.65;
+}
+
+.badge{
+    display:inline-block;
+    background:#e7f1ff;
+    color:#0757a6;
+    padding:4px 8px;
+    border-radius:5px;
+    font-size:13px;
+    margin-top:8px;
+}
+
+.footer{
+    text-align:center;
+    padding:25px;
+    color:#666;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="header">
+
+<h2>
+TRUNG TÂM PHỤC VỤ HÀNH CHÍNH CÔNG XÃ DIỄN CHÂU
+</h2>
+
+<h1>
+🏠 KHO E-FORM ĐẤT ĐAI
+</h1>
+
+<p>
+Kê khai nhanh - Chính xác - Thuận tiện
+</p>
+
+</div>
+
+
+<div class="container">
+
+<a class="back" href="index.html">
+← Quay lại Kho biểu mẫu
+</a>
+
+
+<input
+class="search"
+type="text"
+placeholder="🔎 Tìm biểu mẫu đất đai..."
+>
+
+
+<div class="card active">
+
+<a href="mau26.html">
+
+<h3>
+📄 Mẫu số 26
+</h3>
+
+<p>
+Đơn đăng ký đất đai, tài sản gắn liền với đất
+</p>
+
+<span class="badge">
+KÊ KHAI E-FORM
+</span>
+
+</a>
+
+</div>
+
+
+<div class="card coming">
+
+<h3>
+📄 Đăng ký biến động đất đai
+</h3>
+
+<p>
+E-Form đang được xây dựng
+</p>
+
+</div>
+
+
+<div class="card coming">
+
+<h3>
+📄 Cấp đổi Giấy chứng nhận
+</h3>
+
+<p>
+E-Form đang được xây dựng
+</p>
+
+</div>
+
+
+<div class="card coming">
+
+<h3>
+📄 Tách thửa / Hợp thửa
+</h3>
+
+<p>
+E-Form đang được xây dựng
+</p>
+
+</div>
+
+
+<div class="card coming">
+
+<h3>
+📄 Đính chính Giấy chứng nhận
+</h3>
+
+<p>
+E-Form đang được xây dựng
+</p>
+
+</div>
+
+
+</div>
+
+
+<div class="footer">
+
+Trung tâm Phục vụ hành chính công xã Diễn Châu
+
+</div>
+
+</body>
+</html>
